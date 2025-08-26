@@ -3187,31 +3187,12 @@ No Error because it has exactly one incomplete method
 Example 3:
 ----------
 @FunctionalInterface
-public interface A {//Error->A functional interface should consist of exactly one //incomplete method inside it
+public interface A {
 	public void test1();
 	public void test2();
 }
-
-public static void main(String[] args) {
-		B b1 = new B();
-		b1.test1();
-		b1.test2();
-		b1.test3();
-		b1.test4();
-	}
-
-	@Override
-	public void test1() {
-		System.out.println("From test 1");
-	}
-		
-}
 Output:
----------
-From test 1
-From Test 2
-From Test 3
-From Test 4
+Error->A functional interface should consist of exactly one incomplete method inside it
 
 Example 5:
 -----------
@@ -5522,6 +5503,7 @@ public class B {
 		System.out.println(a1.getX());
 	}
 }
+
 
 
 
